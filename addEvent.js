@@ -17,7 +17,7 @@ var addEvent = (function() {
 				}
 			} else {
 				el.attachEvent('on' + type, function() {
-					return fn.call(el, window.event);
+					return fn.call(el, window.event);  // attachEvent的this对象始终指向window，这里通过call将其指向el
 				});
 			}
 		}
