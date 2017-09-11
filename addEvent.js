@@ -1,3 +1,6 @@
+/**
+ * 兼容多浏览器的事件监听方法
+ */
 var addEvent = (function() {
 	if(document.addEventListener) {
 		return function(el, type, fn) {
